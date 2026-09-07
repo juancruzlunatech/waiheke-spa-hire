@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { StripeBuyButton } from '../components/StripeBuyButton'
 import { loadOpsData } from '../lib/storage'
 
 export function Pricing() {
@@ -33,12 +34,17 @@ export function Pricing() {
               </li>
             ))}
           </ul>
-          <Link
-            to="/book"
-            className="mt-8 inline-flex rounded-full bg-sea px-6 py-3 text-sm font-semibold text-white hover:bg-sea-dark"
-          >
-            Enquire for these dates
-          </Link>
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-start">
+            <Link
+              to="/book"
+              className="inline-flex rounded-full bg-sea px-6 py-3 text-sm font-semibold text-white hover:bg-sea-dark"
+            >
+              Enquire for these dates
+            </Link>
+          </div>
+          <div className="mt-6 rounded-2xl border border-dashed border-amber-400/60 bg-amber-50/80 p-4">
+            <StripeBuyButton />
+          </div>
         </div>
         <div className="space-y-4">
           <div className="rounded-2xl border border-line bg-sand/50 p-6">

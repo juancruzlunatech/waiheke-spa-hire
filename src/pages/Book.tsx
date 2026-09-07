@@ -1,5 +1,6 @@
 import { type FormEvent, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { StripeBuyButton } from '../components/StripeBuyButton'
 import { addEnquiry, loadOpsData } from '../lib/storage'
 
 export function Book() {
@@ -144,6 +145,16 @@ export function Book() {
           ).
         </p>
       </form>
+
+      <div className="mt-10 rounded-3xl border border-dashed border-amber-400/60 bg-amber-50/80 p-6">
+        <h2 className="font-display text-xl font-semibold text-navy">Or pay a deposit (Stripe test)</h2>
+        <p className="mt-2 text-sm text-muted">
+          Sandbox checkout via Stripe Buy Button. Use Stripe test cards — no real charge.
+        </p>
+        <div className="mt-4">
+          <StripeBuyButton />
+        </div>
+      </div>
     </div>
   )
 }
